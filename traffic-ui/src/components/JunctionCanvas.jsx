@@ -66,7 +66,7 @@ export default function JunctionCanvas({ signalState, vehiclesPerArm, mode, onAm
             const laneDots = dots[arm].filter(d => d.lane === 1);
             const mOffset = laneDots.length > 0 ? Math.max(...laneDots.map(d => d.offset)) : 20;
             // Cap offset at 450 so it's always visible on screen immediately
-            const spawnOffset = Math.min(450, mOffset + 60); 
+            const spawnOffset = Math.min(450, mOffset + 60);
             dots[arm].push({
               type: 'ambulance', offset: Math.max(350, spawnOffset),
               lane: 1, wobble: 0, speed: 3.8, flash: 0,
